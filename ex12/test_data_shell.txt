@@ -1,0 +1,6 @@
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+kon:x:1000:1000:kon,,,:/home/kon:/bin/bh
+sssd:x:120:125:SSSD system user,,,:/var/lib/sss:/usr/sbin/nologin
+mysql:x:121:126:MySQL Server,,,:/nonexistent:/bin/false
