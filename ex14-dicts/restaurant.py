@@ -9,14 +9,13 @@
 from menu import MENU
 
 def menu_response(req: str) -> tuple[int, str]:
-    price = MENU.setdefault(req, 0)
-    # price = MENU[req] if req in MENU else 0
+    price = MENU[req] if req in MENU else 0
     ans = str(price) if price else 'Такого блюда нет в меню.'
     return (price, ans)  
 
 def user_communication():
     sum = 0
-    while order := input('Заказ: '):
+    while order := input('Заказ: ').strip():
         resp = menu_response(order)
         sum += resp[0]
         if resp[0]:
