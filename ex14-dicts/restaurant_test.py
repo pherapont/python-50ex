@@ -9,6 +9,9 @@ class TestRestaurantMenu(unittest.TestCase):
     def test_dish_not_on_menu(self):
         self.assertEqual(menu_response('Шампанское'),
                          (0, 'Такого блюда нет в меню.'))
+
+    def test_incorrect_dish_name(self):
+        ...
         
 if __name__ == '__main__':
     unittest.main()
