@@ -1,6 +1,6 @@
 '''
 Идея по тестированию функции get_final_line: создаем тестовый файл,
-записываем в него несколько строк, потом применяем к нему get_final_line, 
+записываем в него несколько строк, потом применяем к нему get_final_line,
 и в результате должны получить последнюю строку.
 '''
 import unittest
@@ -15,6 +15,7 @@ strings = [
 
 test_file = 'test_lines.txt'
 
+
 class TestGetFinalLine(unittest.TestCase):
 
     def test_get_final_line(self):
@@ -24,5 +25,10 @@ class TestGetFinalLine(unittest.TestCase):
                 tf.write('\n')
         self.assertEqual("I'm go back\n", get_final_line(test_file))
 
+    def test_final_line_this_file(self):
+        self.assertEqual(get_final_line("last_line_test.py"),
+                         "    unittest.main()\n")
+
+
 if __name__ == '__main__':
-    unittest.main()
+        unittest.main()

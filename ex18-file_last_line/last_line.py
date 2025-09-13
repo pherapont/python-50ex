@@ -2,7 +2,6 @@ def get_final_line(file_name):
     with open(file_name, 'r') as tf:
         prev = ''
         for line in tf:
-            print(prev, ' => ', line)
             if not line:
                 break
             prev = line
